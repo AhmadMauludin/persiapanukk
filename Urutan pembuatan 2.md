@@ -1,4 +1,24 @@
-buka di browser **https://github.com/twbs/icons/releases/download/v1.13.1/bootstrap-icons-1.13.1.zip**
+Instalasi CodeIgniter 4
+
+1. Download package CI4, lalu ekstrak
+2. Rename nama folder root aplikasinya dengan nama 3. sendiri (satu kata tanpa spasi).
+4. Pindahkan ke folder htdocs
+
+Konfigurasikan agar CI agar dapat berjalan di server xampp
+1. Pindahkan seluruh file dalam folder public ke luar (ke folder root aplikasi)
+2. Buka file index.php, hilangkan ../ pada bagian  require FCPATH
+3. Konfigurasi file app/Config/App.php, edit Base URl menjadi localhost/namafolderroot
+4. Konfigurasi file app/Config/Paths.php, tambahkan $publicDirectory = __DIR__ . '/../'; di akhir sebelum tutup kurawal } 
+5. Buat database baru (namanya samakan dengan nama folder root aplikasinya)
+
+Konfigurasikan file env
+1. rename file env menjadi .env
+2. aktifkan dan ubah # CI_ENVIRONMRNT = production menjadi CI_ENVIRONMENT = development
+3. aktifkan semua bagian database.default
+database.default.database = CI4 ubah menjadi database.default.database = namadatabase
+4. buang root pada bagian database.default.password
+
+untuk download icons bootstrap, buka di browser **https://github.com/twbs/icons/releases/download/v1.13.1/bootstrap-icons-1.13.1.zip**
 
 1\. Pada folder rootaplikasi Buat Folder assets
 
