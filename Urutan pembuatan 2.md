@@ -1,11 +1,5 @@
 buka di browser **https://github.com/twbs/icons/releases/download/v1.13.1/bootstrap-icons-1.13.1.zip**
 
-
-
-extract dan copykan folder **bootstrap-icons-1.13.1** ke folder **assets**
-
-
-
 1\. Pada folder rootaplikasi Buat Folder assets
 
 2\. Extract Folder bootstrap-5.0.2-dist, copy folder css \& js nya ke folder assets pada aplikasi anda
@@ -23,6 +17,7 @@ extract dan copykan folder **bootstrap-icons-1.13.1** ke folder **assets**
 
 
 6\. Modifikasi file app/Controllers/Home.php ubah bagian return view('welcome\_message'); menjadi return view('layouts/dashboard');
+
 
 
 
