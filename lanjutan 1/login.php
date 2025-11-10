@@ -7,7 +7,7 @@
 
 <body>
 
-            <h1 class="mb-15">Login Disarprass</h1>
+            <h1>Login</h1>
 
             <?php if (session()->getFlashdata('error')): ?>
                 <p style="color:red"><?= session()->getFlashdata('error') ?></p>
@@ -20,12 +20,12 @@
             <form action="<?= base_url('/proses-login') ?>" method="post">
                             <label>Username</label>
                             <input type="text" name="username" placeholder="username" />
+                <br>
                             <label>Password</label>
                             <input type="password" name="password" placeholder="Password" />
+                <br>
                             <button>Sign In</button>
-    </div>
 
 </body>
-
-
 </html>
+
