@@ -30,10 +30,23 @@ Praktikum Lanjutan
 
 4. Pada folder **app/Views** buat folder **layouts** 
 
-5. Pada folder layouts buat 3 file bernama **main.php**, **menu.php** dan **dashboard.php** ketikkan seperti contoh
+5. Pada folder layouts buat 3 file bernama **main.php**, **menu.php** dan **dashboard.php** ketikkan seperti contoh
 
 6. Modifikasi file app/Controllers/Home.php ubah bagian return view('welcome\_message'); menjadi return view('layouts/dashboard');
 
 
+AUTENTIFIKASI (LOGIN USER)
+1. Buat tabel users (id_user, nama, username, role, password, foto) → password di hash
+2. Buat file UsersModel.php di 📁 model
+3. Buat file Auth.php di 📁 controller
+4. Buat file login.php di 📁 Views/auth → copy dari template & sesuaikan dengan kebutuhan → sesuiakan action form & method
+5. Buat file AuthFilter.php (sebagai midleware/filter) & RoleFilter.php di 📂 app/Filters
+6. Tambahkan kode di bawah pada file App/Config/Filters.php
+'auth' => \App\Filters\AuthFilter::class,
+'role' => App\Filters\RoleFilter::class,
+7. Tambahkan rute login, proseslogin & logout di App/Config/Routes.php
+8. Buat Filter Hak Akses & Terapkan di Routes.php
+9. Tambahkan tombol logout di menu / main
 Link panduan
 **https://github.com/AhmadMauludin/persiapanukk**
+
