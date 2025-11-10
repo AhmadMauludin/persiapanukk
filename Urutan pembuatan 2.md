@@ -36,7 +36,7 @@ Praktikum Lanjutan
 
 
 AUTENTIFIKASI (LOGIN USER)
-1. Buat tabel users (id_user:int(10), nama:varchar(30), username:varchar(30), role:enum(admin, user), password:varchar(30), foto:text(100)) → password di hash
+1. Buat tabel users (id_user:int(10), nama:varchar(30), username:varchar(30), role:enum(admin, user), password:varchar(100), foto:text(100)) → password di hash (sementara isi dulu dengan password yang sudah di hash dapat lihat pada file hash.txt, password aslinya 123)
 2. Buat file UsersModel.php di 📁 model
 3. Buat file Auth.php di 📁 controller
 4. Buat file login.php di 📁 Views/auth → copy dari template & sesuaikan dengan kebutuhan → sesuiakan action form & method
@@ -48,11 +48,12 @@ AUTENTIFIKASI (LOGIN USER)
 ```
 7. Tambahkan rute login, proseslogin & logout di App/Config/Routes.php
 8. Buat Filter Hak Akses & Terapkan di Routes.php
-9. Tambahkan tombol logout di menu / main
+9. Tambahkan tombol logout di menu / main (lihat pada file hash.txt)
 
 
 Link panduan
 **https://github.com/AhmadMauludin/persiapanukk**
+
 
 
 
