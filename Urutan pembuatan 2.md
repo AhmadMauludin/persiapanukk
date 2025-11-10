@@ -49,7 +49,7 @@ AUTENTIFIKASI (LOGIN USER)
 ```
 7. Tambahkan rute login, proseslogin & logout di App/Config/Routes.php
 8. Buat Filter Hak Akses & Terapkan di Routes.php
-9. Tambahkan tombol logout di menu / main (lihat pada file hash.txt)
+9. Tambahkan tombol logout di file menu (lihat pada file hash.txt)
 
 
 Link panduan
