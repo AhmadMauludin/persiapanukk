@@ -1,1 +1,4 @@
 $2y$10$FMQRdH0ecCbZZVWtN2n7/u1YZN/gr7X98Er4NG4sqDAWCXlZwmB6S
+
+Tombol logout 
+<a href="<?= site_url('/logout') ?>"> Log Out </a>
