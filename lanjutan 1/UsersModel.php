@@ -20,11 +20,5 @@ class UsersModel extends Model
         return $this->where('username', $username)->first();
     }
 
-    public function search($keyword, $perPage)
-    {
-        return $this->like('nama', $keyword)
-            ->orLike('role', $keyword)
-            ->paginate($perPage);
-    }
 }
 
