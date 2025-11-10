@@ -44,7 +44,7 @@ AUTENTIFIKASI (LOGIN USER)
 6. Tambahkan kode di bawah pada file App/Config/Filters.php
 ```
   'auth' => \App\Filters\AuthFilter::class,
-  'role' => App\Filters\RoleFilter::class,
+  'role' => \App\Filters\RoleFilter::class,
 ```
 7. Tambahkan rute login, proseslogin & logout di App/Config/Routes.php
 8. Buat Filter Hak Akses & Terapkan di Routes.php
@@ -53,6 +53,7 @@ AUTENTIFIKASI (LOGIN USER)
 
 Link panduan
 **https://github.com/AhmadMauludin/persiapanukk**
+
 
 
 
