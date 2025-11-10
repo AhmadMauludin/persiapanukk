@@ -8,7 +8,7 @@ Konfigurasikan agar CI agar dapat berjalan di server xampp
 1. Pindahkan seluruh file dalam folder public ke luar (ke folder root aplikasi)
 2. Buka file index.php, hilangkan ../ pada bagian  require FCPATH
 3. Konfigurasi file app/Config/App.php, edit Base URl menjadi localhost/namafolderroot
-4. Konfigurasi file app/Config/Paths.php, tambahkan $publicDirectory = __DIR__ . '/../'; di akhir sebelum tutup kurawal } 
+4. Konfigurasi file app/Config/Paths.php, tambahkan ```$publicDirectory = __DIR__ . '/../';``` di akhir sebelum tutup kurawal } 
 5. Buat database baru (namanya samakan dengan nama folder root aplikasinya)
 
 Konfigurasikan file env
@@ -54,6 +54,7 @@ AUTENTIFIKASI (LOGIN USER)
 
 Link panduan
 **https://github.com/AhmadMauludin/persiapanukk**
+
 
 
 
