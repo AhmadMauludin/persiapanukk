@@ -39,9 +39,10 @@ AUTENTIFIKASI (LOGIN USER)
 1. Buat tabel users (id_user:int(10), nama:varchar(30), username:varchar(30), role:enum(admin, user), password:varchar(100), foto:text(100)) → password di hash (sementara isi dulu dengan password yang sudah di hash dapat lihat pada file hash.txt, password aslinya 123)
 2. Buat file UsersModel.php di 📁 model
 3. Buat file Auth.php di 📁 controller
-4. Buat file login.php di 📁 Views/auth → copy dari template & sesuaikan dengan kebutuhan → sesuiakan action form & method
-5. Buat file AuthFilter.php (sebagai midleware/filter) & RoleFilter.php di 📂 app/Filters
-6. Tambahkan kode di bawah pada file App/Config/Filters.php
+4. Buat folder auth pada 📁 Views
+5. Buat file login.php di 📁 Views/auth → copy dari template & sesuaikan dengan kebutuhan → sesuiakan action form & method
+6. Buat file AuthFilter.php (sebagai midleware/filter) & RoleFilter.php di 📂 app/Filters
+7. Tambahkan kode di bawah pada file App/Config/Filters.php
 ```
   'auth' => \App\Filters\AuthFilter::class,
   'role' => \App\Filters\RoleFilter::class,
@@ -53,6 +54,7 @@ AUTENTIFIKASI (LOGIN USER)
 
 Link panduan
 **https://github.com/AhmadMauludin/persiapanukk**
+
 
 
 
