@@ -1,3 +1,4 @@
+Password 123 yang sudah di hash :
 $2y$10$FMQRdH0ecCbZZVWtN2n7/u1YZN/gr7X98Er4NG4sqDAWCXlZwmB6S
 
 Tombol logout 
