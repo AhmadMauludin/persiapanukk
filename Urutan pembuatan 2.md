@@ -42,8 +42,9 @@ AUTENTIFIKASI (LOGIN USER)
 4. Buat file login.php di 📁 Views/auth → copy dari template & sesuaikan dengan kebutuhan → sesuiakan action form & method
 5. Buat file AuthFilter.php (sebagai midleware/filter) & RoleFilter.php di 📂 app/Filters
 6. Tambahkan kode di bawah pada file App/Config/Filters.php
-_'auth' => \App\Filters\AuthFilter::class,_
-_'role' => App\Filters\RoleFilter::class,_
+
+'auth' => \App\Filters\AuthFilter::class,
+'role' => App\Filters\RoleFilter::class,
 7. Tambahkan rute login, proseslogin & logout di App/Config/Routes.php
 8. Buat Filter Hak Akses & Terapkan di Routes.php
 9. Tambahkan tombol logout di menu / main
@@ -51,5 +52,6 @@ _'role' => App\Filters\RoleFilter::class,_
 
 Link panduan
 **https://github.com/AhmadMauludin/persiapanukk**
+
 
 
