@@ -26,7 +26,7 @@ $routes->get('/users/delete/(:num)', 'Users::delete/$1', $allRole); // aksi hapu
         </a>
     </li>
 
-14. Agar terlihat pengguna masuk sebagai siapa, tambahkan kode berikut di layouts/menu setelah </ul>
+14. Agar terlihat pengguna masuk sebagai siapa, tambahkan kode berikut di layouts/menu.php setelah </ul>
 
 <li class="nav-item mt-3">
     <span class="nav-link disabled">Masuk sebagai: <b><?= session('nama'); ?> (<?= session('role'); ?>)</b></span>
