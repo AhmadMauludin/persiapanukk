@@ -1,7 +1,7 @@
 1. Buat folder users di dalam folder app/Views
 2. Buat file create.php pada folder users
 3. Buat file Users.php pada folder app/Controllers
-4. Tambahkan route baru pada file routes.php
+4. Tambahkan route baru pada file Config/Routes.php
 
 $routes->get('/users/create', 'Users::create');  // form tambah user
 $routes->post('/users/store', 'Users::store');   // aksi simpan user
