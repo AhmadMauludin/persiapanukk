@@ -4,10 +4,10 @@ Lanjutan dari panduan sebelumnya :
 10. Pada folder app/Views/users buat file baru bernama index.php (tampilan data users) dan edit.php (tampilan edit data)
 11. Tambahkan route baru pada file Config/Routes.php
 
-$routes->get('/users', 'Users::index'); // menampilkan data user
-$routes->get('/users/edit/(:num)', 'Users::edit/$1'); // form edit user
-$routes->post('/users/update/(:num)', 'Users::update/$1'); // aksi update user
-$routes->get('/users/delete/(:num)', 'Users::delete/$1'); // aksi hapus user
+$routes->get('/users', 'Users::index', $allRole); // menampilkan data user
+$routes->get('/users/edit/(:num)', 'Users::edit/$1', $allRole); // form edit user
+$routes->post('/users/update/(:num)', 'Users::update/$1', $allRole); // aksi update user
+$routes->get('/users/delete/(:num)', 'Users::delete/$1', $allRole); // aksi hapus user
 
 12. Tambahkan menu kelola users pada file layouts/menu.php
 
