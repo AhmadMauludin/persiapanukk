@@ -1,0 +1,38 @@
+Lanjutan dari panduan sebelumnya :
+
+9. Tambahkan function tambahan pada file controller Users.php 
+10. Pada folder app/Views/users buat file baru bernama index.php (tampilan data users) dan edit.php (tampilan edit data)
+11. Tambahkan route baru pada file Config/Routes.php
+
+$routes->get('/users', 'Users::index'); // menampilkan data user
+$routes->get('/users/edit/(:num)', 'Users::edit/$1'); // form edit user
+$routes->post('/users/update/(:num)', 'Users::update/$1'); // aksi update user
+$routes->get('/users/delete/(:num)', 'Users::delete/$1'); // aksi hapus user
+
+12. Tambahkan menu kelola users pada file layouts/menu.php
+
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('/users') ?>">
+            <i class="bi bi-people"></i> <span>Users</span>
+        </a>
+    </li>
+
+13. Agar pengguna role : user dapat mengubah data dirinya, tambahkan menu setting pada layouts/menu.php
+
+    <?php $idu = session('id_user'); ?>
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('users/edit/' . $idu) ?>">
+            <i class="bi bi-person-gear"></i> <span>Setting</span>
+        </a>
+    </li>
+
+14. Agar terlihat pengguna masuk sebagai siapa, tambahkan kode berikut di layouts/menu setelah </ul>
+
+<li class="nav-item mt-3">
+    <span class="nav-link disabled">Masuk sebagai: <b><?= session('nama'); ?> (<?= session('role'); ?>)</b></span>
+</li>
+
+<center>
+    <img src="<?= base_url('uploads/users/' . session()->get('foto')) ?>" height="80" class="mt-3 rounded-circle" />
+</center>
+ 
