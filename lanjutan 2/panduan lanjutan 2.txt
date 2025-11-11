@@ -12,5 +12,5 @@ $routes->post('/users/store', 'Users::store');   // aksi simpan user
 
 6. Buat folder uploads pada folder root aplikasi
 7. Pada folder uploads buat folder users
-
-Uji coba dengan menambahkan pengguna baru, lalu coba login dengan pengguna yang baru dibuat.
+8. Cek pada database (phpmyadmin) apakah datanya sudah masuk atau belum
+9. Uji coba dengan menambahkan pengguna baru, lalu coba login dengan pengguna yang baru dibuat.
