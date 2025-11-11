@@ -1,0 +1,16 @@
+1. Buat folder users di dalam folder app/Views
+2. Buat file create.php pada folder users
+3. Buat file Users.php pada folder app/Controllers
+4. Tambahkan route baru pada file routes.php
+
+$routes->get('/users/create', 'Users::create');  // form tambah user
+$routes->post('/users/store', 'Users::store');   // aksi simpan user
+
+5. Tambahkan tombol daftar pada halaman login.php
+
+<a href="<?= base_url('users/create') ?>">Daftar Baru</a>
+
+6. Buat folder uploads pada folder root aplikasi
+7. Pada folder uploads buat folder users
+
+Uji coba dengan menambahkan pengguna baru, lalu coba login dengan pengguna yang baru dibuat.
