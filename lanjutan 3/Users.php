@@ -54,6 +54,7 @@ class Users extends BaseController
         return redirect()->to('/login')->with('success', 'User berhasil ditambahkan!');
     }
 
+    // Tambahannya ini
     public function index()
     {
         $data['users'] = $this->users->findAll();
@@ -120,4 +121,6 @@ class Users extends BaseController
 
         return redirect()->to('/users')->with('success', 'User berhasil dihapus!');
     }
+    // sampai sini
 }
+
