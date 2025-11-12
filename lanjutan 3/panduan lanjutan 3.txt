@@ -35,4 +35,38 @@ $routes->get('/users/delete/(:num)', 'Users::delete/$1', $allRole); // aksi hapu
 <center>
     <img src="<?= base_url('uploads/users/' . session()->get('foto')) ?>" height="80" class="mt-3 rounded-circle" />
 </center>
- 
+
+
+
+
+=====================
+SEDIKIT BAHASAN MENGENAI MVC
+CODEIGNITER4 : Framework / Kerangka Kerja. -> 
+Model View Controller. -> Memudahkan pengembangan.
+
+PHP Murni -> Basic.
+
+Model berfungsi untuk mengelola data dan logika bisnis yang berhubungan dengan database. Penghubung apk -> Database.
+
+View berfungsi untuk menampilkan data kepada pengguna.
+
+Controller berfungsi sebagai penghubung antara Model dan View.
+
+Routes berfungsi untuk mengatur jalur (URL) yang mengarah ke controller dan metode tertentu.
+
+[ Browser / User ]
+        ↓
+Routes
+        ↓
+Controller
+        ↓
+Model (ambil data)
+        ↓
+Controller (olah data)
+        ↓
+View (tampilkan hasil)
+        ↓
+[ Browser / User ]
+
+
+tabel -> model -> controller -> view -> Rooutes.php
