@@ -52,10 +52,6 @@ AUTENTIFIKASI (LOGIN USER)
 9. Tambahkan tombol logout di file menu (lihat pada file hash.txt)
 
 
-Link panduan
-**https://github.com/AhmadMauludin/persiapanukk**
-
-
 
 
 
