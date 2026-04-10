@@ -24,6 +24,7 @@ class Users extends BaseController
         $validation = \Config\Services::validation();
         $validation->setRules([
             'nama'     => 'required',
+            'email'    => 'email',
             'username' => 'required|is_unique[users.username]',
             'password' => 'required|min_length[4]',
             'role'     => 'required',
@@ -45,6 +46,7 @@ class Users extends BaseController
         // ============== Simpan Data ==============
         $this->users->save([
             'nama'     => $this->request->getPost('nama'),
+            'email'    => $this->request->getPost('email'),
             'username' => $this->request->getPost('username'),
             'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
             'role'     => $this->request->getPost('role'),
