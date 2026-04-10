@@ -11,8 +11,9 @@ $authFilter = ['filter' => 'auth'];
 
 // Variabel Role
 $admin     = ['filter' => 'role:admin'];
-$user     = ['filter' => 'role:user'];
-$allRole   = ['filter' => 'role:admin, user'];
+$petugas     = ['filter' => 'role:petugas'];
+$anggota     = ['filter' => 'role:anggota'];
+$allRole   = ['filter' => 'role:admin, petugas, anggota'];
 
 // Login
 $routes->get('/login', 'Auth::login');
