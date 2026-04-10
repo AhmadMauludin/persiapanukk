@@ -1,27 +1,26 @@
 <?= $this->extend('layouts/main') ?>
 <?= $this->section('content') ?>
 
-<div class="container mt-5">
+<div>
 
-    <h3 class="mb-4">Data Users</h3>
+    <h3>Data Users</h3>
 
     <?php if (session()->getFlashdata('success')): ?>
-        <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
+        <div><?= session()->getFlashdata('success') ?></div>
     <?php endif; ?>
 
-    <table class="table table-bordered table-striped">
-        <thead class="table-dark">
-            <tr class="text-center">
-                <th width="50">No</th>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
                 <th>Nama</th>
                 <th>Email</th>
                 <th>Username</th>
                 <th>Role</th>
                 <th>Foto</th>
                 <?php if (session()->get('role') == 'admin') : ?>
-                    <th width="150">Aksi</th>
+                    <th>Aksi</th>
                 <?php endif; ?>
-
             </tr>
         </thead>
 
@@ -30,29 +29,28 @@
                 <?php $no = 1;
                 foreach ($users as $u): ?>
                     <tr>
-                        <td class="text-center"><?= $no++ ?></td>
+                        <td><?= $no++ ?></td>
                         <td><?= $u['nama'] ?></td>
                         <td><?= $u['email'] ?></td>
                         <td><?= $u['username'] ?></td>
                         <td><?= ucfirst($u['role']) ?></td>
-                        <td class="text-center">
+                        <td>
                             <?php if ($u['foto']): ?>
-                                <img src="<?= base_url('uploads/users/' . $u['foto']) ?>" width="60" class="rounded">
+                                <img src="<?= base_url('uploads/users/' . $u['foto']) ?>" width="60">
                             <?php else: ?>
-                                <span class="text-muted">-</span>
+                                -
                             <?php endif; ?>
                         </td>
-                        <?php if (session()->get('role') == 'admin') : ?>
 
-                            <td class="text-center">
-                                <a href="<?= base_url('users/edit/' . $u['id']) ?>" class="btn btn-warning btn-sm">
-                                    <i class="bi bi-pencil-square"></i> Edit
+                        <?php if (session()->get('role') == 'admin') : ?>
+                            <td>
+                                <a href="<?= base_url('users/edit/' . $u['id']) ?>">
+                                    Edit
                                 </a>
 
                                 <a href="<?= base_url('users/delete/' . $u['id']) ?>"
-                                    onclick="return confirm('Hapus user ini?')"
-                                    class="btn btn-danger btn-sm">
-                                    <i class="bi bi-trash"></i> Hapus
+                                    onclick="return confirm('Hapus user ini?')">
+                                    Hapus
                                 </a>
                             </td>
                         <?php endif; ?>
@@ -61,11 +59,12 @@
                 <?php endforeach; ?>
             <?php else: ?>
                 <tr>
-                    <td colspan="6" class="text-center text-muted">Belum ada data user</td>
+                    <td colspan="7">Belum ada data user</td>
                 </tr>
             <?php endif; ?>
         </tbody>
     </table>
 
 </div>
+
 <?= $this->endSection() ?>
