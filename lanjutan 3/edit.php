@@ -9,13 +9,16 @@
 
         <div class="card-body">
 
-            <form action="<?= base_url('users/update/' . $user['id_user']) ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= base_url('users/update/' . $user['id']) ?>" method="post" enctype="multipart/form-data">
 
                 <div class="mb-3">
                     <label class="form-label">Nama Lengkap</label>
                     <input type="text" name="nama" value="<?= $user['nama'] ?>" class="form-control" required>
                 </div>
-
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="text" name="email" value="<?= $user['email'] ?>" class="form-control" required>
+                </div>
                 <div class="mb-3">
                     <label class="form-label">Username</label>
                     <input type="text" name="username" value="<?= $user['username'] ?>" class="form-control" required>
@@ -30,7 +33,8 @@
                     <label class="form-label">Role</label>
                     <select name="role" class="form-control">
                         <option value="admin" <?= $user['role'] == 'admin' ? 'selected' : '' ?>>Admin</option>
-                        <option value="user" <?= $user['role'] == 'user' ? 'selected' : '' ?>>User</option>
+                        <option value="petugas" <?= $user['role'] == 'petugas' ? 'selected' : '' ?>>Petugas</option>
+                        <option value="anggota" <?= $user['role'] == 'anggota' ? 'selected' : '' ?>>Anggota</option>
                     </select>
                 </div>
 
