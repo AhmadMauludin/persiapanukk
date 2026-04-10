@@ -52,7 +52,8 @@
                         <select name="role" class="form-control" required>
                             <option value="">-- Pilih Role --</option>
                             <option value="admin">Admin</option>
-                            <option value="user">User</option>
+                            <option value="petugas">Petugas</option>
+                            <option value="anggota">Anggota</option>
                         </select>
                     </div>
 
