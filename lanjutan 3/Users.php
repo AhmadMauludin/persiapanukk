@@ -56,10 +56,24 @@ class Users extends BaseController
         return redirect()->to('/login')->with('success', 'User berhasil ditambahkan!');
     }
 
-    // Tambahannya ini
     public function index()
     {
-        $data['users'] = $this->users->findAll();
+        $keyword = $this->request->getGet('keyword');
+        $role = $this->request->getGet('role');
+
+        $builder = $this->users;
+
+        if ($keyword) {
+            $builder = $builder->like('nama', $keyword);
+        }
+
+        if ($role) {
+            $builder = $builder->where('role', $role);
+        }
+
+        $data['users'] = $builder->paginate(10);
+        $data['pager'] = $this->users->pager;
+
         return view('users/index', $data);
     }
 
