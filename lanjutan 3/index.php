@@ -14,6 +14,7 @@
             <tr class="text-center">
                 <th width="50">No</th>
                 <th>Nama</th>
+                <th>Email</th>
                 <th>Username</th>
                 <th>Role</th>
                 <th>Foto</th>
@@ -31,6 +32,7 @@
                     <tr>
                         <td class="text-center"><?= $no++ ?></td>
                         <td><?= $u['nama'] ?></td>
+                        <td><?= $u['email'] ?></td>
                         <td><?= $u['username'] ?></td>
                         <td><?= ucfirst($u['role']) ?></td>
                         <td class="text-center">
@@ -43,11 +45,11 @@
                         <?php if (session()->get('role') == 'admin') : ?>
 
                             <td class="text-center">
-                                <a href="<?= base_url('users/edit/' . $u['id_user']) ?>" class="btn btn-warning btn-sm">
+                                <a href="<?= base_url('users/edit/' . $u['id']) ?>" class="btn btn-warning btn-sm">
                                     <i class="bi bi-pencil-square"></i> Edit
                                 </a>
 
-                                <a href="<?= base_url('users/delete/' . $u['id_user']) ?>"
+                                <a href="<?= base_url('users/delete/' . $u['id']) ?>"
                                     onclick="return confirm('Hapus user ini?')"
                                     class="btn btn-danger btn-sm">
                                     <i class="bi bi-trash"></i> Hapus
