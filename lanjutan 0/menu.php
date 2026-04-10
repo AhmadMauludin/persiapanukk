@@ -1,12 +1,7 @@
-<ul class="nav flex-column mt-3">
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <b>Maldin17</b>App <i class="bi bi-yelp"></i>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/') ?>">
-            <i class="bi bi-house"></i> <span>Dashboard</span>
-        </a>
-    </li>
-</ul>
+   <a href="#">
+        <b>Maldin17</b>App
+    </a><br>
+
+    <a href="<?= base_url('/') ?>">
+        Dashboard
+    </a><br>
