@@ -18,9 +18,10 @@
 
         <button type="submit">Cari</button>
         <a href="<?= base_url('users') ?>">Reset</a>
-    </form>
-        <a href="<?= base_url('users/print?' . http_build_query($_GET)) ?>" target="_blank">
-            Print
+                <a href="<?= base_url('users/print?' . http_build_query($_GET)) ?>" target="_blank">
+            Print </a>
+                </form>
+
     <br>
 
     <?php if (session()->getFlashdata('success')): ?>
