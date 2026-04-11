@@ -170,4 +170,25 @@ class Users extends BaseController
 
         return view('users/print', $data);
     }
+    public function wa($id)
+    {
+        $user = $this->users->find($id);
+
+        if (!$user) {
+            return redirect()->back()->with('error', 'Data tidak ditemukan');
+        }
+
+        // format pesan
+        $pesan = "DATA USER\n\n";
+        $pesan .= "ID: " . $user['id'] . "\n";
+        $pesan .= "Nama: " . $user['nama'] . "\n";
+        $pesan .= "Email: " . $user['email'] . "\n";
+        $pesan .= "Username: " . $user['username'] . "\n";
+        $pesan .= "Role: " . ucfirst($user['role']) . "\n";
+
+        // encode URL
+        $url = "https://wa.me/6285175017991?text=" . urlencode($pesan);
+
+        return redirect()->to($url);
+    }
 }
