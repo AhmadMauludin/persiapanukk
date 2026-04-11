@@ -64,6 +64,7 @@
                             <td>
                                 <a href="<?= base_url('users/detail/' . $u['id']) ?>">Detail</a>
                                 <a href="<?= base_url('users/edit/' . $u['id']) ?>">Edit</a>
+                                <a href="<?= base_url('users/wa/' . $u['id']) ?>" target="_blank">Kirim WA</a>
                                 <a href="<?= base_url('users/delete/' . $u['id']) ?>"
                                     onclick="return confirm('Hapus user ini?')">Hapus</a>
                             </td>
